@@ -4,7 +4,7 @@ use App\Http\Controllers\authController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingpage');
 });
 
 Route::get('/register', [authController::class, 'register'])->name('register');

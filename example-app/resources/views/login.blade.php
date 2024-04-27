@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel 10 Custom Login and Registration - Login Page</title>
