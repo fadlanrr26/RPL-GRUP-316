@@ -1,121 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduTrack</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff; /* Warna latar belakang body putih */
-            color: #000; /* Warna teks */
-        }
-
-        .header-container {
-            padding: 0px;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .rectangle {
-            padding: 5px;
-            border-radius: 0px;
-            color: #fff; /* Warna teks */
-        }
-
-        .rectangle-1 {
-            background-color: #0095ff; /* Warna biru muda */
-            margin-right: 0px;
-            padding: 15px;
-        }
-
-        .rectangle-2 {
-            background-color: #0960d1; /* Warna biru tua */
-            margin-left: 0px;
-            padding: 1px; /* Ubah ukuran padding */
-        }
-
-        .go-to-app {
-            background-color: #0095ff; /* Warna biru muda */
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            position: absolute;
-            top: 30px; /* Menggeser ke bawah */
-            left: calc(85% - 20px); /* Menggeser ke kiri */
-            border: 2px solid #fff; /* Warna garis bingkai putih */
-        }
-
-        .go-to-app:hover {
-            background-color: #0769d1; /* Warna biru muda saat hover */
-        }
-
-        .content {
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-            position: relative;
-            float: middle;
-        }
-
-        .bottom-text {
-            text-align: left;
-            padding: 20px 30px; /* Atur padding atas dan bawah */
-            overflow: hidden; /* Mencegah konten menyebar */
-            margin-top: 20px; /* Sesuaikan margin top */
-        }
-
-        .bottom-text img {
-            margin-left: 20px; /* Memberikan jarak antara gambar dengan teks */
-            float: right; /* Pindahkan gambar ke kanan */
-        }
-
-        .btn {
-            padding: 5px 20px;
-            background-color: #0095ff;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-            margin-right: 10px;
-        }
-
-        .btn:hover {
-            background-color: #0769d1;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <div class="header-container">
-        <div class="rectangle rectangle-1">
-            <div class="logo-container">
-                <header>
-                    <h1>EduTrack</h1>
-                </header>
+    <header>
+        <div class="w-full h-40 bg-blue-500 sticky top-0">
+            <div class="flex justify-between w-full h-full ">
+                <div class=" ml-20">
+                    <h1 class="text-7xl font-bold text-[#F5F5DC] mt-16">EduTrack</h1>
+                </div>
+                <div class="align-center mr-20">
+                    <a href="">
+                        <div class="w-52 h-20 border-2 border-white rounded-2xl mt-14 shadow-md ">
+                            <h3 class="text-xl font-bold text-white text-center mt-5 font-monserrat">Go to app</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <a href="#" class="go-to-app">Go to App</a>
         </div>
-        <div class="rectangle rectangle-2">
-            <header>
-                <h2>Track your activity here!</h2>
-            </header>
+        <div class="w-full bg-[#015483] border-box">
+            <h3 class="text-white text-2xl ml-20 py-3 font-monserrat">Track your activity here!</h3>
         </div>
-    </div>
-    <div class="content">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPzvyTEjxuzbWfaGe2JUJMrmw8FzPTXfwVoWvDgoQBQ&s" alt="Image">
-    </div>
-    <div class="bottom-text">
-        <p>Raih informasi dan perkembangan akademik anak di sekolah secara REAL-TIME</p>
-        <a href="#" class="btn">Get Started</a>
-        <a href="#" class="btn">Learn More</a>
-    </div>
+    </header>
+
+    <section>
+        <div class="flex pl-20">
+            <div class="w-1/2">
+                <div class="w-[80%] ">
+                    <h2 class="mt-20 text-4xl font-semibold text-primary font-monserrat">Raih Informasi dan Perkembangan
+                        akademik anak di sekolah secara REAL-TIME.</h2>
+                </div>
+                <div class="flex">
+                    <button class="w-52 h-16 border-2 border-white bg-primary rounded-2xl mt-14 shadow-md mr-5">
+                        <h4 class="font-monserrat text-white text-md pr-20 pb-3">Get Started</h4>
+                    </button>
+                    <button class="w-52 h-16 border-2 border-primary bg-white rounded-2xl mt-14 shadow-md">
+                        <h4 class="font-monserrat text-primary text-md pr-20 pb-3">Learn More</h4>
+                    </button>
+                </div>
+                <div class="flex space-x-20 mt-10">
+                    <div>
+                        <h1 class="text-primary text-3xl font-monserrat font-semibold mx-auto text-center">100K+</h1>
+                        <p class="text-primary text-lg font-monserrat font-semibold">Student</p>
+                    </div>
+                    <div>
+                        <h1 class="text-primary text-3xl font-monserrat font-semibold text-center">1K+</h1>
+                        <p class="text-primary text-lg font-monserrat font-semibold">Indicators</p>
+                    </div>
+                    <div>
+                        <h1 class="text-primary text-3xl font-monserrat font-semibold text-center">100+</h1>
+                        <p class="text-primary text-lg font-monserrat font-semibold">Student</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/2 ">
+            <div class="w-[75%] h-[75%] ">
+                <img class="object-cover" src="hero.png" alt="">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007EC5',
+                    }
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>
