@@ -8,6 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto px-24">
             <div class="grid grid-cols-2 gap-x-32 gap-y-8">
+<<<<<<< HEAD
                 @role('guru')
                 <a href="{{ route('inputNilai') }}" class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/input.png') }}" alt="Photo">Input Nilai</a>
                 <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/consultation.png') }}" alt="Photo">Feedback Konsultasi</div>
@@ -19,6 +20,12 @@
                 <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/lomba.png') }}" alt="Photo">Kegiatan Lomba</div>
                 <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/pemahaman-materi.png') }}" alt="Photo">Pemahaman Materi</div>
                 @endrole    
+=======
+                <a href="{{ route('inputNilai') }}" class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/input.png') }}" alt="Photo">Input Nilai</a>
+                <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/consultation.png') }}" alt="Photo">Feedback Konsultasi</div>
+                <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/filekonsultasi.png') }}" alt="Photo">File Konsultasi</div>
+                <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/ekstra.png') }}" alt="Photo">Ekstrakurikuler</div>
+>>>>>>> 0d3be9ee3badf68b6f086e698473f707e7bc6886
             </div>
         </div>
     </div>
