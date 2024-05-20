@@ -22,10 +22,7 @@
     <div class="min-h-screen flex flex-col items-center p-16 bg-gray-100">
         <div class="text-center">
             <h1 class="text-[#1A4B83] font-semibold text-5xl">Register EduTrack</h1>
-<<<<<<< HEAD
             <h2 class="text-[#1A4B83] font-semibold text-3xl">Guru</h2>
-=======
->>>>>>> 0d3be9ee3badf68b6f086e698473f707e7bc6886
             <p class="mt-6 font-quicksand font-semibold text-[#090A0B]  ">Inputkan data diri Anda untuk pembuatan akun
                 baru.<br>
                 Kamu dapat menambahkan info tambahan setelah registrasi.</p>
