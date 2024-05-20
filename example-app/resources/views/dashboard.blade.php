@@ -6,11 +6,12 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
+        <div class="max-w-7xl mx-auto px-24">
+            <div class="grid grid-cols-2 gap-x-32 gap-y-8">
+                <a href="{{ route('inputNilai') }}" class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/input.png') }}" alt="Photo">Input Nilai</a>
+                <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/consultation.png') }}" alt="Photo">Feedback Konsultasi</div>
+                <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/filekonsultasi.png') }}" alt="Photo">File Konsultasi</div>
+                <div class="flex items-center gap-x-5 bg-[#ADD8E6] px-20 py-5 text-xl"><img src="{{ asset('assets/images/ekstra.png') }}" alt="Photo">Ekstrakurikuler</div>
             </div>
         </div>
     </div>
