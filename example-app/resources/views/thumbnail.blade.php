@@ -34,8 +34,8 @@
         <div class="flex flex-col gap-y-10 w-1/2">
             <h1 class="font-blackHanSansRegular text-6xl text-[#F5F5DC]">Welcome To<br> EduTrack</h1>
             <p class="text-xl font-semibold font-quicksand">Raih informasi dan perkembangan<br> akademik anak di sekolah secara<br> real-time.</p>
-            <button class="bg-[#286EBD] px-6 py-4 text-white w-fit">Login</button>
-            <p>New user? <a href="{{ route('choose-role') }}" class="underline">Register Here!</a></p>
+            <a href="{{ route('login') }}" class="bg-[#286EBD] px-6 py-4 text-white w-fit">Login</a>
+            <p>New user? <a href="{{ route('registerGuru') }}" class="underline">Register Here!</a></p>
         </div>
         <div class="grid place-items-center w-1/2">
             <img class="w-2/3" src="{{ asset('assets/images/background.png') }}" alt="Photo">

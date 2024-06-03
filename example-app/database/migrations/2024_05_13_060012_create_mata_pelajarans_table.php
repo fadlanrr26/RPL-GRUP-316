@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('mata_pelajarans', function (Blueprint $table) {
             $table->id();
-            $table->string('kode')->unique();
             $table->string('mata_pelajaran');
             $table->enum('level', ['SD', 'SMP', 'SMA']);
+            $table->enum('class', ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']);
             $table->timestamps();
         });
     }

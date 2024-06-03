@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('mata_pelajaran_id');
             $table->integer('nilai');
             $table->timestamps();
+            $table->unique(['student_id', 'mata_pelajaran_id']);
 
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('mata_pelajaran_id')->references('id')->on('mata_pelajarans')->onDelete('cascade');

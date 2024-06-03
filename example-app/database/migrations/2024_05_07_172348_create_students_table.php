@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->enum('level', ['SD', "SMP", "SMA"]);
+            $table->enum('class', ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']);
             $table->date('entry_date');
             $table->timestamps();
         });

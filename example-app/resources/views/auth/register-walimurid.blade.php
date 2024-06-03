@@ -22,10 +22,7 @@
     <div class="min-h-screen flex flex-col items-center p-16 bg-gray-100">
         <div class="text-center">
             <h1 class="text-[#1A4B83] font-semibold text-5xl">Register EduTrack</h1>
-<<<<<<< HEAD
             <h2 class="text-[#1A4B83] font-semibold text-3xl">Wali Murid</h2>
-=======
->>>>>>> 0d3be9ee3badf68b6f086e698473f707e7bc6886
             <p class="mt-6 font-quicksand font-semibold text-[#090A0B]  ">Inputkan data diri Anda untuk pembuatan akun
                 baru.<br>
                 Kamu dapat menambahkan info tambahan setelah registrasi.</p>
@@ -47,11 +44,7 @@
                     <!-- Nomor Telepon -->
                     <div class="w-full mt-3">
                         <x-input-label for="no_telepon" :value="__('Nomor Telepon')" />
-<<<<<<< HEAD
                         <x-text-input id="no_telepon" class="block mt-1 w-full" type="text" name="no_telepon"
-=======
-                        <x-text-input id="no_telepon" class="block mt-1 w-full" type="email" name="no_telepon"
->>>>>>> 0d3be9ee3badf68b6f086e698473f707e7bc6886
                             :value="old('no_telepon')" required autocomplete="no_telepon" />
                         <x-input-error :messages="$errors->get('no_telepon')" class="mt-2" />
                     </div>
@@ -61,11 +54,7 @@
                     <div class="w-full mt-3">
                         <x-input-label for="username" :value="__('Username')" />
                         <x-text-input id="username" class="block mt-1 w-full" type="text" name="username"
-<<<<<<< HEAD
                             :value="old('username')" required autofocus autocomplete="name" />
-=======
-                            :value="old('username')" required autofocus autocomplete="username" />
->>>>>>> 0d3be9ee3badf68b6f086e698473f707e7bc6886
                         <x-input-error :messages="$errors->get('username')" class="mt-2" />
                     </div>
 
@@ -100,7 +89,6 @@
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
                 </div>
-<<<<<<< HEAD
                 <!-- id_anak -->
                 <div class="w-full mt-3">
                     <x-input-label for="id_anak" :value="__('Nama Murid')" />
@@ -113,20 +101,6 @@
                         @endforeach
                     </select>
                     <x-input-error :messages="$errors->get('id_anak')" class="mt-2" />
-=======
-                <!-- nama_anak -->
-                <div class="w-full mt-3">
-                    <x-input-label for="nama_anak" :value="__('Nama Murid')" />
-                    <select name="nama_anak" id="nama_anak"
-                        class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
-                        required>
-                        <option value="">Pilih Nama Murid</option>
-                        <option value="SD">SD</option>
-                        <option value="SMP">SMP</option>
-                        <option value="SMA">SMA</option>
-                    </select>
-                    <x-input-error :messages="$errors->get('nama_anak')" class="mt-2" />
->>>>>>> 0d3be9ee3badf68b6f086e698473f707e7bc6886
                 </div>
 
 
