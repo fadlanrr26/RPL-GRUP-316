@@ -13,7 +13,20 @@ return new class extends Migration
     {
         Schema::create('administrasis', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("studentId");
+            $table->unsignedBigInteger("waliMuridId")->nullable();
+            $table->string('tahunAjaran');
+            $table->string('semester');
+            $table->integer('SPP');
+            $table->date('batasWaktu');
+            $table->string('alasan')->nullable();
+            $table->integer('totalTagihan');
+            $table->integer('mangkir')->nullable();
+            $table->string('status');
             $table->timestamps();
+
+            $table->foreign('waliMuridId')->references('id')->on('wali_murids')->onDelete('cascade');
+            $table->foreign('studentId')->references('id')->on('students')->onDelete('cascade');
         });
     }
 

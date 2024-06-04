@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('konsultasis', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('waliMuridId');
+            $table->unsignedBigInteger('studentId');
+            $table->unsignedBigInteger('guruId');
+            $table->date('date');
+            $table->string('topik');
             $table->timestamps();
+
+            $table->foreign('guruId')->references('id')->on('gurus')->onDelete('cascade');
+            $table->foreign('waliMuridId')->references('id')->on('wali_murids')->onDelete('cascade');
+            $table->foreign('studentId')->references('id')->on('students')->onDelete('cascade');
         });
     }
 
