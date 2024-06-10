@@ -32,11 +32,10 @@
     </div>
     <div class="px-20 flex flex-col justify-center" style="height: 72vh;">
         <h1 class="text-white text-center font-blackHanSansRegular text-4xl">Pilih Posisi Anda</h1>
-        <form action="{{ route('register') }}" method="post" class="flex items-center justify-center gap-x-10 mt-16">
-            @csrf
-            <button type="submit" name="role" value="guru" class="w-2/12 py-6 text-white bg-[#FCC43E] text-xl font-semibold hover:bg-[#ba994c] transition-all">Guru</button>
-            <button type="submit" name="role" value="wali murid" class="w-2/12 py-6 text-white bg-[#FCC43E] text-xl font-semibold hover:bg-[#ba994c] transition-all">Wali Murid</button>
-        </form>
+        <div class="flex items-center justify-center gap-x-10 mt-16">
+            <a href="{{ route('registerGuru') }}" class="w-2/12 text-center py-6 text-white bg-[#FCC43E] text-xl font-semibold hover:bg-[#ba994c] transition-all">Guru</a>
+            <a href="{{ route('registerWaliMurid') }}" class="w-2/12 text-center py-6 text-white bg-[#FCC43E] text-xl font-semibold hover:bg-[#ba994c] transition-all">Wali Murid</a>
+        </div>
     </div>
 </body>
 

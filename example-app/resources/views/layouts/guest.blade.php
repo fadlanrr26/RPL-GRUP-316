@@ -20,14 +20,18 @@
 
 <body class="font-sans text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-        <div>
-            <h1>Register EduTrack</h1>
+        <div class="text-center">
+            <h1 class="text-[#1A4B83] font-semibold text-5xl">Login EduTrack</h1>
+            <p class="mt-6 font-quicksand font-semibold text-[#090A0B]  ">Inputkan Email dan Password anda</p>
         </div>
 
-        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+        <div class="w-1/2 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
             {{ $slot }}
         </div>
     </div>
+    <img class="w-1/3 absolute top-0 right-0" src="{{ asset('assets/images/ellipse1.png') }}" alt="">
+
+    <img class="w-1/3 absolute bottom-0 left-0" src="{{ asset('assets/images/ellipse2.png') }}" alt="">
 </body>
 
 </html>

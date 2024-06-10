@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Nilai extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['student_id', 'mata_pelajaran_id', 'nilai', 'semester', 'tahunAjaran'];
+
+    public function student(){
+        return $this->belongsTo(Student::class, 'student_id');
+    }
+
+    public function mapel(){
+        return $this->belongsTo(MataPelajaran::class, 'mata_pelajaran_id');
+    }
 }

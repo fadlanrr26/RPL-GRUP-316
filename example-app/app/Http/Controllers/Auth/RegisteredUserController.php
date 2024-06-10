@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\Guru;
 use App\Models\User;
+use App\Models\Student;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
 use App\Http\Controllers\Controller;
+use App\Models\WaliMurid;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
@@ -18,14 +20,15 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(Request $request): View
+    public function registerGuru(): View
     {
-        $role = $request->role;
-        if($role == "guru"){
-            return view('auth.register-guru');
-        } else{
-            return view('auth.register-walimurid');
-        }
+        return view('auth.register-guru');
+    }
+
+    public function registerWaliMurid(): View
+    {
+        $students = Student::all();
+        return view('auth.register-walimurid', compact('students'));
     }
 
     /**
@@ -35,7 +38,6 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        // dd($request->all());
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'no_telepon' => ['required', 'unique:'.User::class, 'regex:/^[0-9+\s]+$/', 'min:10'],
@@ -47,10 +49,12 @@ class RegisteredUserController extends Controller
         if($request->role == "guru"){
             $request->validate(["tingkatan_sekolah" => ['required', 'string', 'max:255']]);
             }else{
-            $request->validate(["nama_anak" => ['required', 'string', 'max:255']]);
+            $request->validate(["id_anak" => ['required', 'string', 'max:255']]);
         }
 
         if($request->role == "guru"){
+            $prefix = "11";
+            $randomNumber = $prefix . str_pad(mt_rand(0, 99999999), 8, '0', STR_PAD_LEFT);
             $user = User::create([
                 'username' => $request->username,
                 'no_telepon' => $request->no_telepon,
@@ -60,6 +64,7 @@ class RegisteredUserController extends Controller
             ])->assignRole('guru');
             Guru::create([
                 "tingkatan_sekolah" => $request->tingkatan_sekolah,
+                'nip' => $randomNumber,
                 "user_id" => $user->id
             ]);
         }else{
@@ -69,17 +74,19 @@ class RegisteredUserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-            ])->assignRole('wali_murid');
-            Guru::create([
-                "nama_murid" => $request->nama_murid,
+            ])->assignRole('wali murid');
+            WaliMurid::create([
+                "id_anak" => $request->id_anak,
                 "user_id" => $user->id
             ]);
         }
-
         event(new Registered($user));
 
         Auth::login($user);
-
-        return redirect(route('dashboard', absolute: false));
+        if(auth()->user()->guru){
+            return redirect(route('dashboard', absolute: false));
+        }else{
+            return redirect()->route('waliDashboard');
+        }
     }
 }

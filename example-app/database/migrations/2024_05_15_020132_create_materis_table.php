@@ -11,9 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('feedback', function (Blueprint $table) {
+        Schema::create('materis', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('mapel_id');
+            $table->string('kelas');
+            $table->string('judul');
+            $table->text('deskripsi');
             $table->timestamps();
+
+            $table->foreign('mapel_id')->references('id')->on('mata_pelajarans')->onDelete('cascade');
         });
     }
 
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('feedback');
+        Schema::dropIfExists('materis');
     }
 };
