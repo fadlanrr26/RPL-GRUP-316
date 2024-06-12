@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Feedback extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
+=======
+
+    protected $fillable = ['waliMuridId', 'guruId', 'judulFeedback' , 'feedback'];
+
+    public function guru(){
+        return $this->belongsTo(Guru::class, 'guruId');
+    }
+
+    public function walimurid(){
+        return $this->belongsTo(WaliMurid::class, 'waliMuridId');
+    }
+
+    public function student(){
+        return $this->belongsTo(Student::class, 'studentId');
+    }
+>>>>>>> origin/Damario
 }

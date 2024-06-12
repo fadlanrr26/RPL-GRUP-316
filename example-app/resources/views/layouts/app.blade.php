@@ -28,12 +28,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <!-- Scripts -->
 
+<<<<<<< HEAD
+=======
+    <!-- Datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+    <!-- Datatable -->
+
+>>>>>>> origin/Damario
     <!-- Sweetalert -->
     <script src="sweetalert2.min.js"></script>
     <script src="sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Sweetalert -->
+<<<<<<< HEAD
+=======
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+
+        #tableData_length {
+            width: 50%;
+            padding: 16px;
+        }
+
+        #dt-length-0 {
+            width: 25%;
+        }
+
+        #tableData_length>label>select {
+            width: 20%;
+        }
+
+        #tableData_filter {
+            padding: 16px;
+        }
+
+        #tableData_info {
+            padding: 26px 16px;
+        }
+
+        #tableData_paginate {
+            padding: 16px;
+        }
+    </style>
+    <!-- Calender Tailwind -->
+>>>>>>> origin/Damario
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -46,7 +90,11 @@
             @role('wali murid')
             <ul class="space-y-2 font-medium mt-5">
                 <li>
+<<<<<<< HEAD
                     <a href="{{ route('dashboard') }}"
+=======
+                    <a href="{{ route('waliDashboard') }}"
+>>>>>>> origin/Damario
                         class="flex hover:bg-[#F5F5DC] hover:text-[#19559A] px-4 py-2 transition-all rounded-lg cursor-pointer gap-x-3 items-center text-[#F5F5DC] font-medium text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -74,18 +122,30 @@
                     </button>
                     <ul id="dropdown-example" class="hidden py-2 space-y-2">
                         <li>
+<<<<<<< HEAD
                             <a href="#"
+=======
+                            <a href="{{ route('daftarKonsultasi') }}"
+>>>>>>> origin/Damario
                                 class="flex hover:bg-[#F5F5DC] hover:text-[#19559A] pr-4 pl-8 py-2 transition-all rounded-lg cursor-pointer gap-x-3 items-center text-[#F5F5DC] font-medium text-lg">Daftar
                                 Konsultasi</a>
                         </li>
                         <li>
+<<<<<<< HEAD
                             <a href="#"
+=======
+                            <a href="{{ route('feedback') }}"
+>>>>>>> origin/Damario
                                 class="flex hover:bg-[#F5F5DC] hover:text-[#19559A] pr-4 pl-8 py-2 transition-all rounded-lg cursor-pointer gap-x-3 items-center text-[#F5F5DC] font-medium text-lg">Feedback</a>
                         </li>
                     </ul>
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="#"
+=======
+                    <a href="{{ route('akademik') }}"
+>>>>>>> origin/Damario
                         class="flex hover:bg-[#F5F5DC] hover:text-[#19559A] px-4 py-2 transition-all rounded-lg cursor-pointer gap-x-3 items-center text-[#F5F5DC] font-medium text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -113,7 +173,11 @@
                     </button>
                     <ul id="dropdown-administrasi" class="hidden py-2 space-y-2">
                         <li>
+<<<<<<< HEAD
                             <a href="#"
+=======
+                            <a href="{{ route('administrasiDetail') }}"
+>>>>>>> origin/Damario
                                 class="flex hover:bg-[#F5F5DC] hover:text-[#19559A] pr-4 pl-8 py-2 transition-all rounded-lg cursor-pointer gap-x-3 items-center text-[#F5F5DC] font-medium text-lg">Detail
                                 Pembayaran</a>
                         </li>
@@ -224,7 +288,10 @@
             title: 'Success',
             text: "{!! $message !!}",
         })
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Damario
     </script>
     @elseif( $warning = Session::get('warning'))
     <script>
@@ -241,6 +308,14 @@
 
     </script>
     @endif
+<<<<<<< HEAD
+=======
+     <script>
+        $(document).ready(function () {
+            $('#tableData').DataTable();
+        });
+    </script>
+>>>>>>> origin/Damario
     <!-- Sweetalert -->
 </body>
 

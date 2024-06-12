@@ -13,14 +13,22 @@
                 <div class="flex items-center me-4">
                     <input id="inline-radio" type="radio" value="I" name="class" required
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+<<<<<<< HEAD
                     <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900">I
                         1</label>
+=======
+                    <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900">I</label>
+>>>>>>> origin/Damario
                 </div>
                 <div class="flex items-center me-4">
                     <input id="inline-2-radio" type="radio" value="II" name="class" required
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+<<<<<<< HEAD
                     <label for="inline-2-radio" class="ms-2 text-sm font-medium text-gray-900">II
                         2</label>
+=======
+                    <label for="inline-2-radio" class="ms-2 text-sm font-medium text-gray-900">II</label>
+>>>>>>> origin/Damario
                 </div>
                 <div class="flex items-center me-4">
                     <input id="inline-checked-radio" type="radio" value="III" name="class" required

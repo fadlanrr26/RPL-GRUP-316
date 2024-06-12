@@ -9,7 +9,11 @@ class Nilai extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $fillable = ['student_id', 'mata_pelajaran_id', 'nilai'];
+=======
+    protected $fillable = ['student_id', 'mata_pelajaran_id', 'nilai', 'semester', 'tahunAjaran'];
+>>>>>>> origin/Damario
 
     public function student(){
         return $this->belongsTo(Student::class, 'student_id');

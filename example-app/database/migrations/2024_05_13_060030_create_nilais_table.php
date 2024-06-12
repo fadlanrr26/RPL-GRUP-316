@@ -16,8 +16,14 @@ return new class extends Migration
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('mata_pelajaran_id');
             $table->integer('nilai');
+            $table->string('tahunAjaran');
+            $table->string('semester');
             $table->timestamps();
+<<<<<<< HEAD
             $table->unique(['student_id', 'mata_pelajaran_id']);
+=======
+            $table->unique(['student_id', 'mata_pelajaran_id', 'semester']);
+>>>>>>> origin/Damario
 
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('mata_pelajaran_id')->references('id')->on('mata_pelajarans')->onDelete('cascade');

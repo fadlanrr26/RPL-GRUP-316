@@ -5,9 +5,15 @@
             <div class="flex">
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @role('guru')
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @elserole('wali murid')
+                    <x-nav-link :href="route('waliDashboard')" :active="request()->routeIs('waliDashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                    @endrole
                 </div>
             </div>
 

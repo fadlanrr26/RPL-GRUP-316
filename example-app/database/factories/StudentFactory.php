@@ -16,7 +16,12 @@ class StudentFactory extends Factory
      */
      public function definition(): array
     {
+<<<<<<< HEAD
          $level = fake()->randomElement(['SD', 'SMP', 'SMA']);
+=======
+        $faker = \Faker\Factory::create('id_ID');
+        $level = fake()->randomElement(['SD', 'SMP', 'SMA']);
+>>>>>>> origin/Damario
 
         // Determine the class based on the level
         switch ($level) {
@@ -30,12 +35,20 @@ class StudentFactory extends Factory
                 $class = fake()->randomElement(['X', 'XI', 'XII']);
                 break;
         }
+<<<<<<< HEAD
 
         return [
             'name' => fake()->name,
+=======
+        $prefix = "13";
+        $randomNumber = $prefix . str_pad(mt_rand(0, 99999999), 8, '0', STR_PAD_LEFT);
+        return [
+            'name' => $faker->name,
+>>>>>>> origin/Damario
             'level' => $level,
             'class' => $class,
             'entry_date' => fake()->dateTimeBetween('-5 years', 'now')->format('Y-m-d'),
+            'NISN' => $randomNumber
         ];
     }
 }

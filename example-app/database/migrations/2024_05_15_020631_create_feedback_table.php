@@ -11,8 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
+        Schema::create('lombas', function (Blueprint $table) {
+            $table->id();
+            $table->string('judulLomba');
+            $table->text('deskripsiLomba');
+            $table->enum('tingkatan', ['SD', 'SMP', 'SMA']);
+=======
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('waliMuridId');
+            $table->unsignedBigInteger('guruId');
+            $table->string('judulFeedback');
+            $table->text('feedback');
+
+            $table->foreign('guruId')->references('id')->on('gurus')->onDelete('cascade');
+            $table->foreign('waliMuridId')->references('id')->on('wali_murids')->onDelete('cascade');
+>>>>>>> origin/Damario
             $table->timestamps();
         });
     }
@@ -22,6 +37,10 @@ return new class extends Migration
      */
     public function down(): void
     {
+<<<<<<< HEAD
+        Schema::dropIfExists('lombas');
+=======
         Schema::dropIfExists('feedback');
+>>>>>>> origin/Damario
     }
 };

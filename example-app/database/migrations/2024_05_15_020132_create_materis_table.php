@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('mapel_id');
             $table->string('kelas');
             $table->string('judul');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->timestamps();
 
             $table->foreign('mapel_id')->references('id')->on('mata_pelajarans')->onDelete('cascade');

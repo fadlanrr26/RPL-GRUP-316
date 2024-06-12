@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Administrasi extends Model
+class EkstrakurikulerStudent extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
-=======
 
-    protected $guraded = ['id'];
+    protected $fillable = ['studentId', 'ekstraId', 'nilai'];
+
+    public function ekstrakurikuler(){
+        return $this->belongsTo(Ekstrakurikuler::class, 'ekstraId');
+    }
 
     public function student(){
         return $this->belongsTo(Student::class, 'studentId');
     }
->>>>>>> origin/Damario
 }

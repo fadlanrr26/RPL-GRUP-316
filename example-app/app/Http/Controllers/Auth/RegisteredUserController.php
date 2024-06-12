@@ -53,6 +53,8 @@ class RegisteredUserController extends Controller
         }
 
         if($request->role == "guru"){
+            $prefix = "11";
+            $randomNumber = $prefix . str_pad(mt_rand(0, 99999999), 8, '0', STR_PAD_LEFT);
             $user = User::create([
                 'username' => $request->username,
                 'no_telepon' => $request->no_telepon,
@@ -62,6 +64,7 @@ class RegisteredUserController extends Controller
             ])->assignRole('guru');
             Guru::create([
                 "tingkatan_sekolah" => $request->tingkatan_sekolah,
+                'nip' => $randomNumber,
                 "user_id" => $user->id
             ]);
         }else{
@@ -80,8 +83,16 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+<<<<<<< HEAD
 
 
         return redirect(route('dashboard', absolute: false));
+=======
+        if(auth()->user()->guru){
+            return redirect(route('dashboard', absolute: false));
+        }else{
+            return redirect()->route('waliDashboard');
+        }
+>>>>>>> origin/Damario
     }
 }

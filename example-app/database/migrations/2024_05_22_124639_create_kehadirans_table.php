@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('students', function (Blueprint $table) {
+        Schema::create('kehadirans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->enum('level', ['SD', "SMP", "SMA"]);
-            $table->enum('class', ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII']);
-            $table->date('entry_date');
-            $table->integer('NISN');
+            $table->unsignedBigInteger('studentId');
+            $table->date('tanggal');
+            $table->string('izin')->nullable();
             $table->timestamps();
+            
+            $table->foreign('studentId')->references('id')->on('students')->onDelete('cascade');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('kehadirans');
     }
 };
